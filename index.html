@@ -6,7 +6,7 @@
     <title>ZXWebRadio</title>
     
     <link rel="icon" type="image/png" href="favicon.png">
-    <!--<link rel="manifest" href="manifest.json">-->
+    
     <link rel="manifest" href="manifest.json?v=3">
     
     <meta name="mobile-web-app-capable" content="yes">
@@ -15,54 +15,14 @@
     <meta name="theme-color" content="#121212">
 
     <style>
-        /* Μηδενισμός περιθωρίων για πλήρη κάλυψη της οθόνης */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden; /* Εξαφανίζει τα scrollbars */
-            background-color: #121212; /* Το χρώμα του background σου */
-        }
-
-        /* Το Iframe που θα "φιλοξενήσει" το Google Script */
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; background-color: #121212; }
+        iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: block; }
     </style>
 </head>
 <body>
-
     <iframe 
         src="https://script.google.com/macros/s/AKfycbzfcswT_DGsxNhw3KenOplgpj7j_-G5wjaA4yzbozjSePP17iLGunXx8ZwgWk7N0EeNxA/exec" 
-        allow="autoplay; encrypted-media" 
-        title="My Web Radio Content">
+        allow="autoplay; encrypted-media">
     </iframe>
-    <!--
-    <script>
-      // Ανιχνεύουμε την έκδοση Android από τον browser
-      var ua = navigator.userAgent;
-      if (ua.indexOf("Android") > -1) {
-        var androidVersion = parseFloat(ua.slice(ua.indexOf("Android") + 8));
-        
-        // Αν η έκδοση είναι 8.0 ή μεγαλύτερη, προσθέτουμε το manifest δυναμικά
-        if (androidVersion >= 8.0) {
-          var link = document.createElement('link');
-          link.rel = 'manifest';
-          link.href = 'manifest.json';
-          document.head.appendChild(link);
-          console.log("Android 8+ detected: Manifest loaded.");
-        } else {
-          console.log("Android 7 or older detected: Manifest skipped.");
-        }
-      }
-    </script> -->
-
 </body>
 </html>
